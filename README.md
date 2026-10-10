@@ -6,17 +6,17 @@ Eine responsive Single-Page-App, die den Klimawandel didaktisch aufbereitet: kom
 
 ## Einfach öffnen
 
-**`standalone/index.html`** ist eine einzelne, eigenständige Datei mit allem Code, allen Styles und Inhalten. Herunterladen und per Doppelklick im Browser öffnen, ohne Server und ohne Internetverbindung.
+**`index.html`** im Hauptordner ist eine einzelne, eigenständige Datei mit allem Code, allen Styles und Inhalten. Herunterladen und per Doppelklick im Browser öffnen, ohne Server und ohne Internetverbindung.
 
 ## Entwickeln
 
 ```bash
 npm install
-npm run dev       # Entwicklungsserver mit Hot Reload
-npm run build     # Typecheck + erzeugt standalone/index.html neu
+npm run dev       # Entwicklungsserver mit Hot Reload (Einstieg: src/index.html)
+npm run build     # Typecheck + erzeugt die index.html im Hauptordner neu
 ```
 
-Nach Änderungen an Inhalten oder Komponenten `npm run build` ausführen und die neue `standalone/index.html` mit committen. Die `index.html` im Projektstamm ist nur der Einstiegspunkt für Vite und funktioniert nicht direkt im Browser.
+Nach Änderungen an Inhalten oder Komponenten `npm run build` ausführen und die neue `index.html` mit committen.
 
 ## Didaktisches Muster (Progressive Disclosure)
 
@@ -27,7 +27,9 @@ Nach Änderungen an Inhalten oder Komponenten `npm run build` ausführen und die
 ## Struktur
 
 ```
+index.html            # Fertige Einzeldatei (generiert, nicht von Hand bearbeiten)
 src/
+├── index.html            # Vite-Einstieg für die Entwicklung
 ├── data/
 │   ├── types.ts          # Typdefinitionen für alle Inhalte
 │   └── content.ts        # Alle Texte, Zahlen, Tabellen und Quellen
