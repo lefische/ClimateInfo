@@ -4,12 +4,19 @@ Eine responsive Single-Page-App, die den Klimawandel didaktisch aufbereitet: kom
 
 **Stack:** Vite · React 18 · TypeScript · Tailwind CSS v4 · lucide-react
 
+## Einfach öffnen
+
+**`standalone/index.html`** ist eine einzelne, eigenständige Datei mit allem Code, allen Styles und Inhalten. Herunterladen und per Doppelklick im Browser öffnen, ohne Server und ohne Internetverbindung.
+
+## Entwickeln
+
 ```bash
 npm install
-npm run dev       # Entwicklungsserver
-npm run build     # Typecheck + Produktions-Build nach dist/
-npm run preview   # Build lokal ansehen
+npm run dev       # Entwicklungsserver mit Hot Reload
+npm run build     # Typecheck + erzeugt standalone/index.html neu
 ```
+
+Nach Änderungen an Inhalten oder Komponenten `npm run build` ausführen und die neue `standalone/index.html` mit committen. Die `index.html` im Projektstamm ist nur der Einstiegspunkt für Vite und funktioniert nicht direkt im Browser.
 
 ## Didaktisches Muster (Progressive Disclosure)
 
